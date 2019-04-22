@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {AuthService} from './core/auth.service';
 import {AuthGuard} from './core/auth-guard.service';
-// import {SharedModule} from './shared/shared.module';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +14,7 @@ import {AuthGuard} from './core/auth-guard.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule
   ],
   providers: [AuthService,AuthGuard],
   bootstrap: [AppComponent]

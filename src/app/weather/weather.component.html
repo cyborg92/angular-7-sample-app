@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="row text-center">
+    <img class="geoicon-img" src="../../assets/images/geoicon.png" alt="geolocation-icon" />
+    <div >
+        <p class="margin-top-bottom">Use this Page to get your place's Geolocation!</p>
+        <input class="location-input" placeholder="location" [(ngModel)]="locationName">
+        <button class="btn btn-default" (click)="fetchWeather()">Search</button>
+        <p class="margin-top-bottom" *ngIf="latitude">The Current latitude of {{fullLocation}} is {{latitude}} and has
+            longitude {{longitude}}</p>
+    </div>
+</div>

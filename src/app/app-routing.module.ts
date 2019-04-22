@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren:"./home/home.module#HomeModule"
   },
   {
+    path: "geolocation",
+    loadChildren: "./weather/weather.module#WeatherModule"
+  },
+  {
     path: "error",
     loadChildren: "./error/error.module#ErrorModule"
   },
