@@ -3,9 +3,7 @@ import {
     ActivatedRouteSnapshot,
     RouterStateSnapshot,
     Router,
-    CanLoad,
-    CanActivateChild,
-    Route
+    CanActivateChild
   } from '@angular/router';
   import { Observable } from 'rxjs';
   import { Injectable } from '@angular/core';

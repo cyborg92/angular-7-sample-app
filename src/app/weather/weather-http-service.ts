@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpResponse, HttpErrorResponse ,HttpHeaders} from '@angular/common/http';
-import { catchError, map, mergeMap } from 'rxjs/operators';
+import { HttpClient, HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable()
 
@@ -10,29 +10,6 @@ export class WeatherHttpService {
         private http: HttpClient,
     ) { }
 
-    /**
-     * @name getWeather
-     * @description method to fetch weather data
-     * @memberof WeatherHttpService
-     */
-
-    // getWeather(geoUrl: string, options?: any) {
-    //     const httpOptions = {
-    //         headers: new HttpHeaders({ 
-    //           'Access-Control-Allow-Origin':'*'
-    //         })
-    //       };
-    //     this.getGeoData(geoUrl).subscribe(data => {
-    //         let weatherUrl = this.formWeatherUrl(data.latitude, data.longitude);
-    //         this.http.get(weatherUrl,httpOptions).subscribe((response:HttpResponse<Response>) => {
-    //             console.log(response)
-    //         }, ((error:HttpErrorResponse) => {
-    //             console.log(error);
-    //         })
-    //         )
-    //     }
-    //     )
-    // }
     /**
      *@name formWeatherUrl
      * @description used to form dynamic weather api url
