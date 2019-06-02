@@ -22,5 +22,3 @@ deploy:
   provider: heroku
   api_key: b2f08c73-bf24-4812-aa5e-4556d14755f2
   app: rachit-angular7-sample-app
-  on:
-    repo: cyborg92/angular-7-sample-app
