@@ -9,18 +9,18 @@ import {AuthService} from '../core/auth.service';
 })
 
 export class LoginComponent{
-    user:object
+    email:string;
+    password:string;
     constructor(
         private router:Router,
         private authService:AuthService
         ){
-        this.user={
-            email:'',
-            password:''
-        };
+        this.email='',
+        this.password='';
+        
     }
     loginUser(){
-        if(this.user['email']=="rachithanda93@gmail.com" && this.user['password']=="rachit@123"){
+        if(this.email=="rachithanda93@gmail.com" && this.password=="rachit@123"){
             this.authService.login();
             console.log(this.authService.loggedIn);
             this.router.navigate(['/home']);
