@@ -1,10 +1,10 @@
-#Step 1
+# Step 1
 
 You are going to need something to serve your files. Let’s go with express. We will also need ‘path’ to setup our server (unless you wanna hardcode those in yourself)
 
 npm install --save express path
 
-#Step 2.
+# Step 2.
  Now if we want Heroku to build our project on their servers we need to tell them two things.
  1. How to build our project and
  2. What versions of node/npm our code works with
@@ -24,7 +24,8 @@ You can find out with
 
 node --version
 npm --version
-Step 3
+
+# Step 3
 By default angular separates away from deployments what it thinks are ‘development’ only additions. However, since Heroku is building our code, we need to give it the ability to run those modules.
 
 To do this you can either move @angular/cli, @angular/compiler-cli, typescript and "@angular-devkit/build-angular": "~0.6.8"__*__ from our devDependencies over to dependencies. Or we can have Heroku install those modules on their own.
@@ -52,13 +53,14 @@ app.listen(process.env.PORT || 5000);
 
 Remember to replace MY_APP_NAME (both of them) to the name of your app.
 
-#Step 5
+# Step 5
 Now to create a Procfile to tell Heroku “how” we wish our app to be run. In your project directory (same one with package.json) create a file called Procfile and place the following
 
 web: node server.js
-Step 6. Final Step
+
+# Step 6. Final Step
 We can now build our app with npm install and run it with ‘node server.js’.
-If everything works, we should now see a working site on http://localhost:5000
+If everything works, we should now see a working site on http://localhost:8080
 
 If you have any issues feel free to leave a message in the comments.
 
