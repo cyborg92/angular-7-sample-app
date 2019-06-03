@@ -3,16 +3,22 @@ addons:
   chrome: stable
 
 language: node_js
+
 node_js:
   - "11.10.0"
 
+cache: node_ modules
+
 branches:
   only:
-    - master
+    - travis-ci-demo
 
 before_script:
   - npm install -g @angular/cli
 
 script:
   - ng build --prod
-  - ng test
+deploy:
+  provider: heroku
+  api_key: b2f08c73-bf24-4812-aa5e-4556d14755f2
+  app: rachit-angular7-sample-app
